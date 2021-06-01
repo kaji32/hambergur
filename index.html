@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 🍔 -->
+    <input type="checkbox" id="menu">
+    <label for="menu" class="open">🍔</label>
+    <label for="menu" class="back"></label>
+
+    <!-- 🍔 -->
+
+    <aside>
+        <!-- 🍔 -->
+        <label for="menu" class="close">✖️</label>
+    <!-- 🍔 -->
+
+        <nav>
+            <ul >
+                <li>list1</li>
+                <li>list2</li>
+                <li>list3</li>
+                <li>list4</li>
+                <li>list5</li>
+            </ul>
+        </nav>
+        <div>side footer</div>
+    </aside>
+    <main>
+        Main
+    </main>
+
+</body>
+</html>
+
+<!-- 
+    make sidebar menu as like the prior design
+    set checkbox and two labels for the checkbox in the bottom space wichi have open class with hamburger mark and back class respectably.
+    in the aside tag set label for the checkbox with mark X which has the close class
+    when to click the label with close class you can close the menu.
+    display none -> .open, .close for the default styling because when you see the site in computer, the open class and close class are unnecessary,
+    position:absolute; left:-50vh; in both cases, default and responsive design this input tag is not necessary to appear.
+    if set display:none; the checkbox doesn't work.
+    until this point is for the default screen not to some elements
+
+    display:block; -> .open, .close to overwrite "display:none;"
+    position:absolute; to position the hamburger mark at top of the aside... position:absolute; can set the place in coordinate, raise layer level one rank and lose the height wichi have set anterior so need to reset
+    to hide back element set the background-color
+    left:-250px; to hide aside as default, have to consider the size of aside
+     input[type="checkbox"]:checked ~ aside{
+        left:0;
+    } when checkbox is checked aside is positioned at left:0;
+    
+    input[type="checkbox"]:checked ~ .back{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.8);
+    }
+    with this description you can control the menu tab with touch to not menu space
+    but you need to position the menu tab under the <label class="back"> because of high layer lebel
+    擬似要素(pseudo-elements)、間接セレクターindirect selector
+
+-->
